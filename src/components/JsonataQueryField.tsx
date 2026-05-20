@@ -1,4 +1,4 @@
-import { BracesPlugin, QueryField, SlatePrism } from '@grafana/ui';
+import { BracesPlugin, QueryField, SlatePrism } from '@grafarg/ui';
 import React from 'react';
 
 interface Props {

@@ -1,4 +1,4 @@
-import { BracesPlugin, QueryField, SlatePrism, TypeaheadInput } from '@grafana/ui';
+import { BracesPlugin, QueryField, SlatePrism, TypeaheadInput } from '@grafarg/ui';
 import React from 'react';
 import { onSuggest } from 'suggestions';
 

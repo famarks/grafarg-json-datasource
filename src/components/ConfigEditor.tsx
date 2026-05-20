@@ -1,5 +1,5 @@
-import { DataSourcePluginOptionsEditorProps } from '@grafana/data';
-import { DataSourceHttpSettings, InlineField, InlineFieldRow, Input } from '@grafana/ui';
+import { DataSourcePluginOptionsEditorProps } from '@grafarg/data';
+import { DataSourceHttpSettings, InlineField, InlineFieldRow, Input } from '@grafarg/ui';
 import React, { ChangeEvent } from 'react';
 import { JsonApiDataSourceOptions } from '../types';
 
@@ -42,6 +42,9 @@ export const ConfigEditor: React.FC<Props> = ({ options, onOptionsChange }) => {
             onChange={onParamsChange}
             spellCheck={false}
             placeholder="page=1&limit=100"
+            css={undefined}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
           />
         </InlineField>
       </InlineFieldRow>

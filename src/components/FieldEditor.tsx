@@ -1,5 +1,5 @@
-import { FieldType, SelectableValue } from '@grafana/data';
-import { Icon, InlineField, InlineFieldRow, Input, Select } from '@grafana/ui';
+import { FieldType, SelectableValue } from '@grafarg/data';
+import { Icon, InlineField, InlineFieldRow, Input, Select } from '@grafarg/ui';
 import React from 'react';
 import { JsonField, QueryLanguage } from 'types';
 import { JsonataQueryField } from './JsonataQueryField';
@@ -90,7 +90,14 @@ export const FieldEditor = ({ value = [], onChange, limit, onComplete }: Props) 
             />
           </InlineField>
           <InlineField label="Alias" tooltip="If left blank, the field uses the name of the queried element.">
-            <Input width={12} value={field.name} onChange={onAliasChange(index)} />
+            <Input
+              width={12}
+              value={field.name}
+              onChange={onAliasChange(index)}
+              css={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
+            />
           </InlineField>
 
           {(!limit || value.length < limit) && (

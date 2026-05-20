@@ -53,9 +53,9 @@ const config = async (env): Promise<Configuration> => {
       'react-router-dom',
       'd3',
       'angular',
-      '@grafana/ui',
-      '@grafana/runtime',
-      '@grafana/data',
+      '@grafarg/ui',
+      '@grafarg/runtime',
+      '@grafarg/data',
 
       // Mark legacy SDK imports as external if their name starts with the "grafarg/" prefix
       ({ request }, callback) => {
@@ -97,7 +97,7 @@ const config = async (env): Promise<Configuration> => {
         },
         {
           test: /\.css$/,
-          use: ["style-loader", "css-loader"]
+          use: ['style-loader', 'css-loader'],
         },
         {
           test: /\.s[ac]ss$/,
@@ -197,17 +197,16 @@ const config = async (env): Promise<Configuration> => {
       modules: [path.resolve(process.cwd(), 'src'), 'node_modules'],
       unsafeCache: true,
     },
-  }
+  };
 
-  if(isWSL()) {
+  if (isWSL()) {
     baseConfig.watchOptions = {
       poll: 3000,
       ignored: /node_modules/,
-    }}
-
+    };
+  }
 
   return baseConfig;
-
 };
 
 export default config;

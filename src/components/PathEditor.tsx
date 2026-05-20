@@ -1,4 +1,4 @@
-import { InlineField, InlineFieldRow, Input, Select } from '@grafana/ui';
+import { InlineField, InlineFieldRow, Input, Select } from '@grafarg/ui';
 import React from 'react';
 
 interface Props {
@@ -22,7 +22,14 @@ export const PathEditor = ({ method, onMethodChange, path, onPathChange }: Props
         />
       </InlineField>
       <InlineField grow>
-        <Input placeholder="/orders/${orderId}" value={path} onChange={(e) => onPathChange(e.currentTarget.value)} />
+        <Input
+          placeholder="/orders/${orderId}"
+          value={path}
+          onChange={(e) => onPathChange(e.currentTarget.value)}
+          css={undefined}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
+        />
       </InlineField>
     </InlineFieldRow>
   );

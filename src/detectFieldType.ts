@@ -1,4 +1,4 @@
-import { FieldType } from '@grafana/data';
+import { FieldType } from '@grafarg/data';
 
 import moment from 'moment'; // eslint-disable-line no-restricted-imports
 

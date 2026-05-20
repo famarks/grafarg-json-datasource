@@ -1,4 +1,4 @@
-import { TypeaheadInput, TypeaheadOutput } from '@grafana/ui';
+import { TypeaheadInput, TypeaheadOutput } from '@grafarg/ui';
 import { jp } from './jsonpath';
 
 /**

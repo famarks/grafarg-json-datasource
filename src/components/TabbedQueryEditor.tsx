@@ -1,5 +1,5 @@
-import { TimeRange } from '@grafana/data';
-import { CodeEditor, InfoBox, InlineField, InlineFieldRow, RadioButtonGroup, Segment, useTheme } from '@grafana/ui';
+import { TimeRange } from '@grafarg/data';
+import { CodeEditor, InlineField, InlineFieldRow, RadioButtonGroup, Segment, useTheme } from '@grafarg/ui';
 import { JsonDataSource } from 'datasource';
 import { css } from '@emotion/css';
 import defaults from 'lodash/defaults';
@@ -117,7 +117,7 @@ export const TabbedQueryEditor = ({ query, onChange, onRunQuery, fieldsTab, expe
                 margin-bottom: ${theme.spacing.sm};
               `}
             >
-              {({ width }) => (
+              {({ width }: { width: number }) => (
                 <CodeEditor
                   value={q.body || ''}
                   language={bodyType}
@@ -165,16 +165,34 @@ export const TabbedQueryEditor = ({ query, onChange, onRunQuery, fieldsTab, expe
         </InlineField>
       </InlineFieldRow>
       {q.method === 'GET' && q.body && (
-        <InfoBox severity="warning" style={{ maxWidth: '700px', whiteSpace: 'normal' }}>
+        <div
+          style={{
+            maxWidth: '700px',
+            whiteSpace: 'normal',
+            padding: '8px',
+            border: '1px solid #FF9830',
+            borderRadius: '2px',
+            backgroundColor: '#FFF7E6',
+          }}
+        >
           {"GET requests can't have a body. The body you've defined will be ignored."}
-        </InfoBox>
+        </div>
       )}
       {(q.headers ?? []).map(([key, _]) => key.toLowerCase()).find((_) => sensitiveHeaders.includes(_)) && (
-        <InfoBox severity="warning" style={{ maxWidth: '700px', whiteSpace: 'normal' }}>
+        <div
+          style={{
+            maxWidth: '700px',
+            whiteSpace: 'normal',
+            padding: '8px',
+            border: '1px solid #FF9830',
+            borderRadius: '2px',
+            backgroundColor: '#FFF7E6',
+          }}
+        >
           {
             "It looks like you're adding credentials in the header. Since queries are stored unencrypted, it's strongly recommended that you add any secrets to the data source config instead."
           }
-        </InfoBox>
+        </div>
       )}
       {tabs[tabIndex].content}
     </>
