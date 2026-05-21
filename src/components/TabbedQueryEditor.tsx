@@ -1,7 +1,7 @@
 import { TimeRange } from '@grafarg/data';
 import { CodeEditor, InlineField, InlineFieldRow, RadioButtonGroup, Segment, useTheme } from '@grafarg/ui';
 import { JsonDataSource } from 'datasource';
-import { css } from '@emotion/css';
+import { css } from 'emotion';
 import defaults from 'lodash/defaults';
 import React, { useState } from 'react';
 import AutoSizer from 'react-virtualized-auto-sizer';
