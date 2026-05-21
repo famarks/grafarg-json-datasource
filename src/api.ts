@@ -148,6 +148,37 @@ export default class Api {
           .join('&');
     }
 
+    if (!isSafeUrl(req.url)) {
+      throw new Error('URL path contains unsafe characters');
+    }
+
     return getBackendSrv().fetch(req);
   }
+}
+
+function isSafeUrl(originalUrl: string) {
+  const normalizedUrl = originalUrl.replace(/\\/g, '/');
+  let url = normalizedUrl;
+
+  try {
+    url = decodeURIComponent(normalizedUrl);
+  } catch {}
+
+  if (url.endsWith('/..')) {
+    return false;
+  }
+
+  if (url.includes('/../')) {
+    return false;
+  }
+
+  if (url.includes('/..?')) {
+    return false;
+  }
+
+  if (url.includes('\t')) {
+    return false;
+  }
+
+  return true;
 }
