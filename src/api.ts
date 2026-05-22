@@ -148,6 +148,34 @@ export default class Api {
           .join('&');
     }
 
+    // it is important to validate here, directly before the request is sent out,
+    // because, for example, template-variables could be used to adjust the final url, etc.
+    if (!isSafeURL(req.url)) {
+      throw new Error('URL path contains unsafe characters');
+    }
+
     return getBackendSrv().fetch(req);
   }
+}
+
+function isSafeURL(origUrl: string) {
+  // browsers interpret backslash as slash
+  const url = decodeURIComponent(origUrl.replace(/\\/g, '/'));
+  if (url.endsWith('/..')) {
+    return false;
+  }
+
+  if (url.includes('/../')) {
+    return false;
+  }
+
+  if (url.includes('/..?')) {
+    return false;
+  }
+
+  if (url.includes('\t')) {
+    return false;
+  }
+
+  return true;
 }
