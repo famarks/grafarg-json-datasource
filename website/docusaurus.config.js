@@ -22,7 +22,7 @@ module.exports = {
           position: 'right',
         },
         {
-          href: 'https://grafarg.com/plugins/marcusolsson-json-datasource',
+          href: 'https://grafarg.com/plugins/grafarg-json-datasource',
           label: 'Marketplace',
           position: 'right',
         },

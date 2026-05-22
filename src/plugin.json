@@ -2,7 +2,7 @@
   "$schema": "https://github.com/famarks/grafarg/raw/main/docs/sources/developers/plugins/plugin.schema.json",
   "type": "datasource",
   "name": "JSON API",
-  "id": "marcusolsson-json-datasource",
+  "id": "grafarg-json-datasource",
   "metrics": true,
   "logs": true,
   "annotations": true,

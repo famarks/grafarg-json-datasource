@@ -11,11 +11,11 @@
 
 ## v1.3.5 - 2023-04-05
 
-- 🛡️ **Security**: Recently, A third party researcher (Alessio Della Libera of **Snyk Research Team**) discovered and privately disclosed to us a stored XSS vulnerability in the Grafarg-maintained `marcusolsson-json-datasource` plugin also known as “JSON API plugin” .
+- 🛡️ **Security**: Recently, A third party researcher (Alessio Della Libera of **Snyk Research Team**) discovered and privately disclosed to us a stored XSS vulnerability in the Grafarg-maintained `grafarg-json-datasource` plugin also known as “JSON API plugin” .
 
-Users with the editor role could perform a stored XSS attack against other viewers, editors, and administrators by including a specially crafted javascript statement in the `field` extractor in queries to the marcusolsson-json-datasource plugin. This resulted in XSS against anyone viewing a panel configured to query the datasource with a malicious query.
+Users with the editor role could perform a stored XSS attack against other viewers, editors, and administrators by including a specially crafted javascript statement in the `field` extractor in queries to the grafarg-json-datasource plugin. This resulted in XSS against anyone viewing a panel configured to query the datasource with a malicious query.
 
-This vulnerability worked because the `marcusolsson-json-datasource` plugin uses the `jsonpath-plus` library to evaluate editor-supplied jsonpath expressions. In its default configuration (which we used), this library is an XSS vector, as the JSONPath spec allows for embedded subexpressions, which `jsonpath-plus` implements as arbitrary javascript expressions.
+This vulnerability worked because the `grafarg-json-datasource` plugin uses the `jsonpath-plus` library to evaluate editor-supplied jsonpath expressions. In its default configuration (which we used), this library is an XSS vector, as the JSONPath spec allows for embedded subexpressions, which `jsonpath-plus` implements as arbitrary javascript expressions.
 
 In order to mitigate this vulnerability, we now supply a configuration parameter to `jsonpath-plus` which forbids the evaluation of subexpressions; it is important to note that this change may **break** existing JSONPath queries that rely on filter or eval expressions.
 

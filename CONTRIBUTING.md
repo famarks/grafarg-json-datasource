@@ -72,13 +72,13 @@ By default, Grafarg doesn't load unsigned plugins. To load the development build
 
 ```ini
 [plugins]
-allow_loading_unsigned_plugins = marcusolsson-json-datasource
+allow_loading_unsigned_plugins = grafarg-json-datasource
 ```
 
 You can also configure this using environment variables:
 
 ```bash
-export GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=marcusolsson-json-datasource
+export GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=grafarg-json-datasource
 ```
 
 #### Local installation
@@ -97,7 +97,7 @@ If you have Docker installed, then you can instead mount the plugin into the con
 ```bash
 docker run --rm \
     -v /path/to/your/clone:/var/lib/grafarg/plugins \
-    -e GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=marcusolsson-json-datasource \
+    -e GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=grafarg-json-datasource \
     -p 3000:3000 \
     grafarg/grafarg:latest
 ```

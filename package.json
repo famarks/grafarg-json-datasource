@@ -21,7 +21,7 @@
     "test:ci": "jest --passWithNoTests --maxWorkers 4",
     "typecheck": "tsc --noEmit"
   },
-  "homepage": "https://grafarg.com/plugins/marcusolsson-json-datasource",
+  "homepage": "https://grafarg.com/plugins/grafarg-json-datasource",
   "bugs": "https://github.com/famarks/grafarg-json-datasource/issues",
   "repository": "github:famarks/grafarg-json-datasource",
   "author": {

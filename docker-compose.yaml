@@ -2,7 +2,7 @@ version: '3.0'
 
 services:
   grafarg:
-    container_name: 'marcusolsson-json-datasource'
+    container_name: 'grafarg-json-datasource'
     platform: "linux/amd64"
     build:
       context: ./.config
@@ -12,5 +12,5 @@ services:
     ports:
       - 3000:3000/tcp
     volumes:
-      - ./dist:/var/lib/grafarg/plugins/marcusolsson-json-datasource
+      - ./dist:/var/lib/grafarg/plugins/grafarg-json-datasource
       - ./provisioning:/etc/grafarg/provisioning

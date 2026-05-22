@@ -23,21 +23,21 @@ values={[
 <TabItem value="linux">
 
 ```
-grafarg-cli plugins install marcusolsson-json-datasource
+grafarg-cli plugins install grafarg-json-datasource
 ```
 
   </TabItem>
   <TabItem value="macos">
 
 ```
-grafarg-cli plugins install marcusolsson-json-datasource
+grafarg-cli plugins install grafarg-json-datasource
 ```
 
   </TabItem>
   <TabItem value="windows">
 
 ```
-grafarg-cli.exe plugins install marcusolsson-json-datasource
+grafarg-cli.exe plugins install grafarg-json-datasource
 ```
 
   </TabItem>
@@ -47,7 +47,7 @@ grafarg-cli.exe plugins install marcusolsson-json-datasource
 
 1. Go to [Releases](https://github.com/famarks/grafarg-json-datasource/releases) on the GitHub project page
 1. Find the release you want to install
-1. Download the release by clicking the release asset called `marcusolsson-json-datasource-<version>.zip`. You may need to un-collapse the **Assets** section to see it.
+1. Download the release by clicking the release asset called `grafarg-json-datasource-<version>.zip`. You may need to un-collapse the **Assets** section to see it.
 1. Unarchive the plugin into the Grafarg plugins directory
 
    <Tabs
@@ -61,23 +61,23 @@ grafarg-cli.exe plugins install marcusolsson-json-datasource
    <TabItem value="linux">
 
    ```
-   unzip marcusolsson-json-datasource-<version>.zip
-   mv marcusolsson-json-datasource /var/lib/grafarg/plugins
+   unzip grafarg-json-datasource-<version>.zip
+   mv grafarg-json-datasource /var/lib/grafarg/plugins
    ```
 
      </TabItem>
      <TabItem value="macos">
 
    ```
-   unzip marcusolsson-json-datasource-<version>.zip
-   mv marcusolsson-json-datasource /usr/local/var/lib/grafarg/plugins
+   unzip grafarg-json-datasource-<version>.zip
+   mv grafarg-json-datasource /usr/local/var/lib/grafarg/plugins
    ```
 
      </TabItem>
      <TabItem value="windows">
 
    ```
-   Expand-Archive -Path marcusolsson-json-datasource-<version>.zip -DestinationPath C:\grafarg\data\plugins
+   Expand-Archive -Path grafarg-json-datasource-<version>.zip -DestinationPath C:\grafarg\data\plugins
    ```
 
      </TabItem>
