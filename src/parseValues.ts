@@ -1,4 +1,4 @@
-import { FieldType } from '@grafana/data';
+import { FieldType } from '@grafarg/data';
 import dayjs from 'dayjs';
 
 /**

@@ -1,5 +1,5 @@
-import { DataSourcePluginOptionsEditorProps } from '@grafana/data';
-import { DataSourceHttpSettings, InlineField, InlineFieldRow, Input } from '@grafana/ui';
+import { DataSourcePluginOptionsEditorProps } from '@grafarg/data';
+import { DataSourceHttpSettings, InlineField, InlineFieldRow, Input } from '@grafarg/ui';
 import React, { ChangeEvent } from 'react';
 import { JsonApiDataSourceOptions } from '../types';
 

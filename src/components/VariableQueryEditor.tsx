@@ -1,4 +1,4 @@
-import { TimeRange } from '@grafana/data';
+import { TimeRange } from '@grafarg/data';
 import { JsonDataSource } from 'datasource';
 import defaults from 'lodash/defaults';
 import React from 'react';

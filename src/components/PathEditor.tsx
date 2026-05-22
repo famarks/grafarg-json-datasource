@@ -1,4 +1,4 @@
-import { InlineField, InlineFieldRow, Input, Select } from '@grafana/ui';
+import { InlineField, InlineFieldRow, Input, Select } from '@grafarg/ui';
 import React from 'react';
 
 interface Props {

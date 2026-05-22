@@ -1,4 +1,4 @@
-import { BackendSrvRequest, getBackendSrv } from '@grafana/runtime';
+import { BackendSrvRequest, getBackendSrv } from '@grafarg/runtime';
 import cache from 'memory-cache';
 import { Observable } from 'rxjs';
 import { Pair } from 'types';

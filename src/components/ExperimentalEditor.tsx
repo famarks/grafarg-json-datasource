@@ -1,4 +1,4 @@
-import { InfoBox, InlineField, InlineFieldRow, Select } from '@grafana/ui';
+import { InfoBox, InlineField, InlineFieldRow, Select } from '@grafarg/ui';
 import { JSONPath } from 'jsonpath-plus';
 import React from 'react';
 import { JsonApiQuery } from 'types';

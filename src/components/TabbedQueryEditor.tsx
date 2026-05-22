@@ -1,7 +1,7 @@
-import { TimeRange } from '@grafana/data';
-import { CodeEditor, InfoBox, InlineField, InlineFieldRow, RadioButtonGroup, Segment, useTheme } from '@grafana/ui';
+import { TimeRange } from '@grafarg/data';
+import { CodeEditor, InfoBox, InlineField, InlineFieldRow, RadioButtonGroup, Segment, useTheme } from '@grafarg/ui';
 import { JsonDataSource } from 'datasource';
-import { css } from '@emotion/css';
+import { css } from 'emotion';
 import defaults from 'lodash/defaults';
 import React, { useState } from 'react';
 import AutoSizer from 'react-virtualized-auto-sizer';
@@ -117,7 +117,7 @@ export const TabbedQueryEditor = ({ query, onChange, onRunQuery, fieldsTab, expe
                 margin-bottom: ${theme.spacing.sm};
               `}
             >
-              {({ width }) => (
+              {({ width }: { width: number }) => (
                 <CodeEditor
                   value={q.body || ''}
                   language={bodyType}

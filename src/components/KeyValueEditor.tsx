@@ -1,6 +1,6 @@
-import { GrafargTheme } from '@grafana/data';
-import { Button, Icon, stylesFactory, useTheme } from '@grafana/ui';
-import { css } from '@emotion/css';
+import { GrafargTheme } from '@grafarg/data';
+import { Button, Icon, stylesFactory, useTheme } from '@grafarg/ui';
+import { css } from 'emotion';
 import React from 'react';
 import { Pair } from '../types';
 

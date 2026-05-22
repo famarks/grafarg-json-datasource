@@ -1,4 +1,4 @@
-import { QueryEditorProps } from '@grafana/data';
+import { QueryEditorProps } from '@grafarg/data';
 import { JsonDataSource } from 'datasource';
 import React from 'react';
 import { JsonApiDataSourceOptions, JsonApiQuery } from '../types';

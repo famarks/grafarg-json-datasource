@@ -1,5 +1,5 @@
-import { FieldType, SelectableValue } from '@grafana/data';
-import { Icon, InlineField, InlineFieldRow, Input, Select } from '@grafana/ui';
+import { FieldType, SelectableValue } from '@grafarg/data';
+import { Icon, InlineField, InlineFieldRow, Input, Select } from '@grafarg/ui';
 import React from 'react';
 import { JsonField, QueryLanguage } from 'types';
 import { JsonataQueryField } from './JsonataQueryField';

@@ -10,8 +10,8 @@ import {
   ScopedVars,
   TimeRange,
   toDataFrame,
-} from '@grafana/data';
-import { getTemplateSrv } from '@grafana/runtime';
+} from '@grafarg/data';
+import { getTemplateSrv } from '@grafarg/runtime';
 import jsonata from 'jsonata';
 import { JSONPath } from 'jsonpath-plus';
 import { jp } from './jsonpath';

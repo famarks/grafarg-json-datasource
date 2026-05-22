@@ -53,9 +53,9 @@ const config = async (env): Promise<Configuration> => {
       'react-router-dom',
       'd3',
       'angular',
-      '@grafana/ui',
-      '@grafana/runtime',
-      '@grafana/data',
+      '@grafarg/ui',
+      '@grafarg/runtime',
+      '@grafarg/data',
 
       // Mark legacy SDK imports as external if their name starts with the "grafarg/" prefix
       ({ request }, callback) => {
