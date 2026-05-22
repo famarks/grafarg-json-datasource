@@ -1,8 +1,8 @@
 import { dateTime, TimeRange } from '@grafarg/data';
 import { JsonDataSource, replaceMacros } from './datasource';
 
-jest.mock('@grafana/runtime', () => ({
-  ...jest.requireActual('@grafana/runtime'),
+jest.mock('@grafarg/runtime', () => ({
+  ...jest.requireActual('@grafarg/runtime'),
   getTemplateSrv: () => ({
     getVariables: () => [],
     replace: (text?: string) => text,
