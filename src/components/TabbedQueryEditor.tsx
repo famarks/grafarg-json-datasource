@@ -49,10 +49,6 @@ export const TabbedQueryEditor = ({ query, onChange, onRunQuery, fieldsTab, expe
 
   const tabs = [
     {
-      title: 'Fields',
-      content: fieldsTab,
-    },
-    {
       title: 'Path',
       content: (
         <PathEditor
@@ -68,6 +64,10 @@ export const TabbedQueryEditor = ({ query, onChange, onRunQuery, fieldsTab, expe
           }}
         />
       ),
+    },
+    {
+      title: 'Fields',
+      content: fieldsTab,
     },
     {
       title: 'Params',
